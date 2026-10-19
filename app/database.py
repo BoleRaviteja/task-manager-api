@@ -1,10 +1,16 @@
 
+import os
 import sqlite3
 from collections.abc import Iterator
 from contextlib import contextmanager
 from pathlib import Path
 
-DATABASE_PATH = Path(__file__).resolve().parent.parent / "tasks.db"
+DATABASE_PATH = Path(
+    os.environ.get(
+        "DATABASE_PATH",
+        Path(__file__).resolve().parent.parent / "tasks.db",
+    )
+)
 
 
 @contextmanager

@@ -27,3 +27,6 @@ jobs:
 
       - name: Run tests with coverage
         run: python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=90 -v
+
+      - name: Build Docker image
+        run: docker build -t task-manager-api:ci .
