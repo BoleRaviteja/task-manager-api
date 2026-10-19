@@ -3,12 +3,11 @@ from fastapi import APIRouter, HTTPException
 
 from app.services import (
     create_task,
-    list_tasks,
     get_task,
+    list_tasks,
     update_task,
 )
 from app.validators import TaskInput
-
 
 router = APIRouter()
 

@@ -1,6 +1,6 @@
 import pytest
 
-import app.database as database
+from app import database
 
 
 @pytest.fixture(autouse=True)

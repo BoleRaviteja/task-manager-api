@@ -1,5 +1,5 @@
 
-from app.database import initialize_database, get_connection
+from app.database import initialize_database
 from app.services import create_task, get_task, list_tasks
 from app.validators import TaskInput
 
